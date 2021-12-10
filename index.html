@@ -59,17 +59,7 @@
                 <div class="main__code-container">
                     <div class="main__code-icon"><svg width="40" viewBox="0 0 52 12"><use href="#icon-mac"></use></svg></div>
 
-                    <textarea class="main__code" rows="12" spellcheck="false">const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
-
-const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
-
-const unfold = (f, seed) => {
-    const go = (f, seed, acc) => {
-    const res = f(seed)
-    return res ? go(f, res[1], acc.concat([res[0]])) : acc
-    }
-    return go(f, seed, [])
-}</textarea>
+                    <textarea class="main__code" rows="12" spellcheck="false">console.log('Hello World!")</textarea>
                 </div>
 
                 <button class="main__button secondary-button--pattern" type="button">Visualizar com o highlight</button>
