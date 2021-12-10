@@ -39,7 +39,7 @@
 
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a class="nav__item__link nav__item--active" href="">
+                        <a class="nav__item__link" href="">
                             <div class="nav__item__icon"><svg width="24" viewBox="0 0 24 24"><use href="#icon-code"></use></svg></div>
                             <span>Editor de código</span>
                         </a>
@@ -59,7 +59,17 @@
                 <div class="main__code-container">
                     <div class="main__code-icon"><svg width="40" viewBox="0 0 52 12"><use href="#icon-mac"></use></svg></div>
 
-                    <textarea class="main__code" rows="12" spellcheck="false">console.log('Hello World!")</textarea>
+                    <textarea class="main__code" rows="12" spellcheck="false">const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+
+const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+
+const unfold = (f, seed) => {
+    const go = (f, seed, acc) => {
+    const res = f(seed)
+    return res ? go(f, res[1], acc.concat([res[0]])) : acc
+    }
+    return go(f, seed, [])
+}</textarea>
                 </div>
 
                 <button class="main__button secondary-button--pattern" type="button">Visualizar com o highlight</button>
@@ -70,9 +80,9 @@
                 <fieldset class="settings__info">
                     <h3>Seu projeto</h3>
 
-                    <input class="settings__info__title input--pattern" type="text" placeholder="Nome do projeto">
+                    <input class="settings__info__title input--pattern" type="text" placeholder="Nome do seu projeto">
 
-                    <textarea class="settings__info__description input--pattern" rows="3" placeholder="Descrição do projeto"></textarea>
+                    <textarea class="settings__info__description input--pattern" rows="3" placeholder="Descrição do seu projeto"></textarea>
                 </fieldset>
 
                 <fieldset class="settings__style">
