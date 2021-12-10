@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+    --mainColor: #051D3B;
+    --secondaryColor: #5081FB;
+    --brightColor: #fdfdfd;
+    --codePanelColor: #141414;
+    --inputColor: #ffffff20;
+    --inputHoverColor: #ffffff30;
+    --inputPlaceholderColor: #ffffff60;
+    --mainSpacing: 40px;
+    --mainBorderRadius: 8px;
+    --mainFontSize: 16px;
+    --mainFontWeight: 300;
+    --mainColorTransition: 0.2s;
+}
+
+::selection {
+    background: var(--secondaryColor);
+    color: var(--brightColor);
+}
+
+body, input, button, textarea, select {
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--mainColor);
+    padding: var(--mainSpacing);
+}
+
+h2, h3 {
+    color: var(--brightColor);
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: 12px;
+    font-weight: var(--mainFontWeight);
+}
+
+textarea::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background: var(--secondaryColor);
+    border-radius: var(--mainBorderRadius)
+}
+
+input[type=color], select {
+    cursor: pointer;
+}
+
+option {
+    background-color: #344860;
+    font-weight: var(--mainFontWeight);
+}
+
+/*MENU ------->>>*/
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: var(--mainSpacing);
+    height: 56px;
+    margin-bottom: var(--mainSpacing);
+}
+
+.menu__logo-container {
+    display: flex;
+    width: 25%;
+}
+
+.menu__logo {
+    display: flex;
+    fill: var(--brightColor);
+}
+
+.menu__search {
+    width: 50%;
+    height: 100%;
+}
+
+.menu__user-container {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 8px;
+    width: 25%;
+}
+
+.menu__query-button, .menu__query-search {
+    display: none;
+    width: 48px;
+    height: 48px;
+}
+
+.menu__user {
+    display: flex;
+    column-gap: 8px;
+    padding: 12px;
+}
+
+.menu__user__avatar {
+    background-image: url("avatar.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.menu__user__name {
+    color: var(--brightColor);
+    font-size: var(--mainFontSize);
+    font-weight: var(--mainFontWeight);
+}
+
+main {
+    display: flex;
+    gap: var(--mainSpacing);
+}
+
+/*MENU LATERAL ------->>>*/
+.nav {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    width: 25%;
+}
+
+.nav__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+
+.nav__item__link {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    width: fit-content;
+    color: var(--brightColor);
+    text-decoration: none;
+    font-size: var(--mainFontSize);
+    font-weight: var(--mainFontWeight);
+}
+
+.nav__item__icon {
+    background-color: var(--secondaryColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    fill: var(--brightColor);
+    border-radius: 16px;
+}
+
+/*ÁREA CENTRAL ------->>>*/
+.main {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--mainSpacing);
+    width: 50%;
+}
+
+.main__code-container {
+    background-color: #6BD1FF;
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    border-radius: var(--mainBorderRadius);
+}
+
+.main__code-icon {
+    background-color: var(--codePanelColor);
+    display: flex;
+    padding: 16px;
+    border-radius: var(--mainBorderRadius) var(--mainBorderRadius) 0px 0px;
+}
+
+.main__code {
+    background-color: var(--codePanelColor);
+    padding: 0px 16px 16px 16px;
+    color: var(--brightColor);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+    font-weight: var(--mainFontWeight);
+    border: none;
+    outline: none;
+    border-radius: 0px 0px var(--mainBorderRadius) var(--mainBorderRadius);
+    resize: none;
+}
+
+/*CONFIGURAÇÕES DO PROJETO ------->>>*/
+.settings {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    row-gap: 40px;
+}
+
+.settings__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+
+.settings__info__title {
+    resize: none;
+}
+
+.settings__info__description {
+    resize: none;
+}
+
+.settings__style {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+
+.settings__style-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.settings__style__language {
+    height: 56px;
+    /*appearance: none;*/
+}
+
+.settings__style__color-container {
+    height: 56px;
+    padding: 8px;
+    border: 1px solid var(--brightColor);
+    border-radius: var(--mainBorderRadius);
+    box-sizing: border-box;
+}
+
+.settings__style__color {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+}
+
+.settings__style__color::-webkit-color-swatch-wrapper {
+    padding: 0px;
+    margin: 0px;
+}
+
+.settings__style__color::-webkit-color-swatch {
+	border: none;
+    border-radius: calc(var(--mainBorderRadius) / 2);
+}
+
+/*MODIFICADOR: INPUTS DO USUÁRIO ------->>>*/
+.input--pattern {
+    background-color: var(--inputColor);
+    padding: 16px;
+    color: var(--brightColor);
+    font-size: var(--mainFontSize);
+    font-weight: var(--mainFontWeight);
+    outline: none;
+    border: none;
+    border-radius: var(--mainBorderRadius);
+    transition: var(--mainColorTransition) background-color;
+}
+
+.input--pattern:hover, .input--pattern:focus {
+    background-color: var(--inputHoverColor);
+}
+
+.input--pattern::placeholder {
+    color: var(--inputPlaceholderColor);
+}
+
+/*MODIFICADOR: BOTÃO PRINCIPAL ------->>>*/
+.main-button--pattern {
+    background-color: var(--secondaryColor);
+    height: 56px;
+    border: none;
+    outline: none;
+    border-radius: var(--mainBorderRadius);
+    color: var(--mainColor);
+    font-size: var(--mainFontSize);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--mainColorTransition) background-color;
+}
+
+.main-button--pattern:hover {
+    background-color: #7BA4FC;
+}
+
+.main-button--pattern:active {
+    outline: 4px solid #5081FB;
+}
+
+/*MODIFICADOR: BOTÃO SECUNDÁRIO ------->>>*/
+.secondary-button--pattern {
+    background-color: #5081FB10;
+    height: 56px;
+    border: none;
+    outline: none;
+    border-radius: var(--mainBorderRadius);
+    color: var(--brightColor);
+    font-size: var(--mainFontSize);
+    font-weight: var(--mainFontWeight);
+    cursor: pointer;
+    transition: var(--mainColorTransition) background-color;
+}
+
+.secondary-button--pattern:hover {
+    background-color: #5081FB20;
+}
+
+.secondary-button--pattern:active {
+    outline: 4px solid #5081FB30;
+}
+
+/*MODIFIER: BOTÃO DO MENU ------->>>*/
+.menu__button--pattern {
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    fill: var(--brightColor);
+    border-radius: 16px;
+    transition: var(--mainColorTransition) background-color;
+    cursor: pointer;
+}
+
+.menu__button--pattern:hover {
+    background-color: #5081FB10;
+}
+
+.menu__button--pattern:active {
+    transition: none;
+    background-color: #5081FB20;
+}
+
+/*MODIFICADOR: NAVEGAÇÃO ------->>>*/
+.nav__item--active {
+    opacity: 1;
+    transition: var(--mainColorTransition) opacity;
+}
+
+.nav__item--active:hover {
+    opacity: 0.7;
+}
+
+.nav__item--inactive {
+    opacity: 0.3;
+}
+
+/*QUERIES ------->>>*/
+
+@media screen and (max-width: 1200px) {
+    main {
+        flex-direction: column;
+    }
+
+    .menu__logo-container, .menu__user-container {
+        width: initial;
+    }
+
+    .menu__search {
+        width: 100%;
+    }
+
+    .menu__query-button {
+        display: flex;
+    }
+    
+    .menu__user {
+        display: none;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .main, .settings {
+        width: 100%;
+    }
+
+    .settings__style-container {
+        flex-direction: row;
+    }
+    
+    .settings__style__language, .settings__style__color-container {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+
+    body {
+        padding: calc(var(--mainSpacing) / 2);
+    }
+
+    .menu__search {
+        display: none;
+    }
+
+    .menu__query-search {
+        display: flex;
+    }
+
+    .settings__style-container {
+        flex-direction: column;
+    }
+    
+    .settings__style__language, .settings__style__color-container {
+        width: initial;
+    }
+}
+
+@media screen and (max-width: 312px) {
+    .menu__logo {
+        display: none;
+    }
+}
