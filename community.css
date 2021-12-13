@@ -10,7 +10,7 @@ body {
     padding: var(--mainSpacing);
 }
 
-h2, h3 {
+h2 {
     color: var(--brightColor);
     text-transform: uppercase;
     letter-spacing: 6px;
@@ -18,31 +18,15 @@ h2, h3 {
     font-weight: var(--mainFontWeight);
 }
 
-input[type=color], select {
-    cursor: pointer;
-}
-
-option {
-    background-color: var(--inputHoverColor);
-    font-weight: var(--mainFontWeight);
-}
-
-optgroup {
-    background-color: var(--inputColor);
-    font-weight: 500;
+h3 {
+    color: var(--brightColor);
+    font-size: 22px;
+    font-weight: 700;
 }
 
 main {
     display: flex;
-    justify-content:space-between;
     gap: var(--mainSpacing);
-}
-
-/*QUERIES ------->>>*/
-@media screen and (max-width: 1200px) {
-    main {
-        flex-direction: column;
-    }
 }
 
 @media screen and (max-width: 640px) {

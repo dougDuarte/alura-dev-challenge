@@ -1,0 +1,35 @@
+/*MENU LATERAL ------->>>*/
+.nav {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    width: 25%;
+}
+
+.nav__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+
+.nav__item__link {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    width: fit-content;
+    color: var(--brightColor);
+    text-decoration: none;
+    font-size: var(--mainFontSize);
+    font-weight: var(--mainFontWeight);
+}
+
+.nav__item__icon {
+    background-color: var(--secondaryColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    fill: var(--brightColor);
+    border-radius: 16px;
+}

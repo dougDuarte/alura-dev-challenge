@@ -5,15 +5,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="global.css">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="community.css">
         <link rel="stylesheet" href="menu.css">
         <link rel="stylesheet" href="nav.css">
-        <link rel="stylesheet" href="code-panel.css">
-        <link rel="stylesheet" href="settings.css">
+        <link rel="stylesheet" href="project.css">
         <link rel="stylesheet" href="nav-mobile.css">
         <link rel="stylesheet" href="modifiers.css">
         <link rel="stylesheet" href="variables.css">
-        <title>Alura Dev</title>
+        <title>Alura Dev - Comunidade</title>
     </head>
 
     <body>
@@ -27,7 +26,7 @@
             <input class="menu__search input--pattern --mobile-hidden" type="search" placeholder="Busque por algo">
 
             <div class="menu__user-container">
-                <div class="menu__query-search menu__button--pattern --tablet-hidden --desktop-hidden"><svg width="24" viewBox="0 0 24 24"><use href="#icon-search"></use></svg></div>
+                <div class="menu__query-search menu__button--pattern --desktop-hidden --tablet-hidden"><svg width="24" viewBox="0 0 24 24"><use href="#icon-search"></use></svg></div>
 
                 <div class="menu__query-button menu__button--pattern --desktop-hidden"><svg width="24" viewBox="0 0 24 24"><use href="#icon-menu"></use></svg></div>
 
@@ -46,14 +45,14 @@
 
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a class="nav__item__link" href="index.html">
+                        <a class="nav__item__link nav__item--inactive" href="index.html">
                             <div class="nav__item__icon"><svg width="24" viewBox="0 0 24 24"><use href="#icon-code"></use></svg></div>
                             <span>Editor de código</span>
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a class="nav__item__link nav__item--inactive" href="community.html">
+                        <a class="nav__item__link" href="">
                             <div class="nav__item__icon"><svg width="24" viewBox="0 0 24 24"><use href="#icon-community"></use></svg></div>
                             <span>Comunidade</span>
                         </a>
@@ -62,69 +61,185 @@
             </nav>
 
             <!--ÁREA CENTRAL-->
-            <section class="main">
-                <div class="main__code-container">
-                    <div class="main__code-icon"><svg width="40" viewBox="0 0 52 12"><use href="#icon-mac"></use></svg></div>
+            <section class="projects-container">
 
-                    <textarea class="main__code" spellcheck="false"></textarea>
+                <div class="project">
+                    <div class="project__thumbnail-container">
+                        <div class="project__thumbnail-icon"><svg width="32" viewBox="0 0 52 12"><use href="#icon-mac"></use></svg></div>
+
+                        <textarea class="project__thumbnail" spellcheck="false" readonly>const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+
+const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+
+const unfold = (f, seed) => {
+    const go = (f, seed, acc) => {
+    const res = f(seed)
+    return res ? go(f, res[1], acc.concat([res[0]])) : acc
+    }
+    return go(f, seed, [])
+}</textarea>
+                    </div>
+
+                    <div class="project__info">
+                        <h3 class="project__info__title">Título do projeto</h3>
+                        <p class="project__info__description">Essa é a descrição do meu projeto.</p>
+                    </div>
+
+                    <div class="project__social">
+                        <div>
+                            <a class="project__social__icon project__button--pattern" href="">
+                                <svg width="24" viewBox="0 0 24 24"><use href="#icon-comment"></use></svg>
+                                <span class="project__user__name">9</span>
+                            </a>
+
+                            <a class="project__social__icon project__button--pattern" href="">
+                                <svg width="24" viewBox="0 0 24 24"><use href="#icon-like"></use></svg>
+                                <span class="project__user__name">9</span>
+                            </a>
+                        </div>
+
+                        <a class="project__user project__button--pattern" href="">
+                            <div class="project__user__avatar"></div>
+                            <span class="project__user__name">@Doug</span>
+                        </a>
+                    </div>
                 </div>
 
-                <button class="main__button secondary-button--pattern" type="button">Visualizar com o highlight</button>
-            </section>
+                <div class="project">
+                    <div class="project__thumbnail-container">
+                        <div class="project__thumbnail-icon"><svg width="32" viewBox="0 0 52 12"><use href="#icon-mac"></use></svg></div>
 
-            <!--CONFIGURAÇÕES DO PROJETO-->
-            <form class="settings">
-                <fieldset class="settings__info">
-                    <h3>Seu projeto</h3>
+                        <textarea class="project__thumbnail" spellcheck="false" readonly>@import url('https://fonts.googleapis.com/css?family=Nova+Mono&display=swap');
 
-                    <input class="settings__info__title input--pattern" type="text" placeholder="Nome do seu projeto">
+* {
+    box-sizing: border-box;
+}
 
-                    <textarea class="settings__info__description input--pattern" rows="3" placeholder="Descrição do seu projeto"></textarea>
-                </fieldset>
-
-                <fieldset class="settings__style">
-                    <h3>Personalização</h3>
-
-                    <div class="settings__style-container">
-                        <select class="settings__style__language input--pattern">
-                            <optgroup label="Programação">
-                                <option>Javascript</option>
-                                <option>Java</option>
-                                <option>Python</option>
-                                <option>Ruby</option>
-                            </optgroup>
-
-                            <optgroup label="Marcação">
-                                <option>HTML5</option>
-                            </optgroup>
-
-                            <optgroup label="Estilização">
-                                <option>CSS3</option>
-                            </optgroup>
-                        </select>
-
-                        <div class="settings__style__color-container">
-                            <input class="settings__style__color" type="color" value="#6BD1FF">
-                        </div>
+body {
+    min-height: 100vh;
+    background-color: #18181c;
+    display: flex;
+    align-items: center;</textarea>
                     </div>
-                </fieldset>
 
-                <button class="settings__button main-button--pattern" type="button">Salvar projeto</button>
-            </form>
+                    <div class="project__info">
+                        <h3 class="project__info__title">Título do projeto</h3>
+                        <p class="project__info__description">Essa é a descrição do meu projeto.</p>
+                    </div>
+
+                    <div class="project__social">
+                        <div>
+                            <a class="project__social__icon project__button--pattern" href="">
+                                <svg width="24" viewBox="0 0 24 24"><use href="#icon-comment"></use></svg>
+                                <span class="project__user__name">9</span>
+                            </a>
+
+                            <a class="project__social__icon project__button--pattern" href="">
+                                <svg width="24" viewBox="0 0 24 24"><use href="#icon-like"></use></svg>
+                                <span class="project__user__name">9</span>
+                            </a>
+                        </div>
+
+                        <a class="project__user project__button--pattern" href="">
+                            <div class="project__user__avatar"></div>
+                            <span class="project__user__name">@Doug</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project__thumbnail-container">
+                        <div class="project__thumbnail-icon"><svg width="32" viewBox="0 0 52 12"><use href="#icon-mac"></use></svg></div>
+
+                        <textarea class="project__thumbnail" spellcheck="false" readonly>let textureOldGoldURL = "https://assets.codepen.io/911157/matcapCop.jpg";
+let modelURL = "https://assets.codepen.io/911157/creativityDoodle_by_Anna_the_Scavenger.glb";
+
+// LANDSCAPE / PORTRAIT
+
+let isMobile = /(Android|iPhone|iOS|iPod|iPad)/i.test(navigator.userAgent);
+let windowRatio = window.innerWidth / window.innerHeight;
+let isLandscape = (windowRatio > 1) ? true : false;</textarea>
+                    </div>
+
+                    <div class="project__info">
+                        <h3 class="project__info__title">Título do projeto</h3>
+                        <p class="project__info__description">Essa é a descrição do meu projeto.</p>
+                    </div>
+
+                    <div class="project__social">
+                        <div>
+                            <a class="project__social__icon project__button--pattern" href="">
+                                <svg width="24" viewBox="0 0 24 24"><use href="#icon-comment"></use></svg>
+                                <span class="project__user__name">9</span>
+                            </a>
+
+                            <a class="project__social__icon project__button--pattern" href="">
+                                <svg width="24" viewBox="0 0 24 24"><use href="#icon-like"></use></svg>
+                                <span class="project__user__name">9</span>
+                            </a>
+                        </div>
+
+                        <a class="project__user project__button--pattern" href="">
+                            <div class="project__user__avatar"></div>
+                            <span class="project__user__name">@Doug</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project__thumbnail-container">
+                        <div class="project__thumbnail-icon"><svg width="32" viewBox="0 0 52 12"><use href="#icon-mac"></use></svg></div>
+
+                        <textarea class="project__thumbnail" spellcheck="false" readonly>let textureOldGoldURL = "https://assets.codepen.io/911157/matcapCop.jpg";
+let modelURL = "https://assets.codepen.io/911157/creativityDoodle_by_Anna_the_Scavenger.glb";
+
+// LANDSCAPE / PORTRAIT
+
+let isMobile = /(Android|iPhone|iOS|iPod|iPad)/i.test(navigator.userAgent);
+let windowRatio = window.innerWidth / window.innerHeight;
+let isLandscape = (windowRatio > 1) ? true : false;</textarea>
+                    </div>
+
+                    <div class="project__info">
+                        <h3 class="project__info__title">Título do projeto</h3>
+                        <p class="project__info__description">Essa é a descrição do meu projeto.</p>
+                    </div>
+
+                    <div class="project__social">
+                        <div>
+                            <a class="project__social__icon project__button--pattern" href="">
+                                <svg width="24" viewBox="0 0 24 24"><use href="#icon-comment"></use></svg>
+                                <span class="project__user__name">9</span>
+                            </a>
+
+                            <a class="project__social__icon project__button--pattern" href="">
+                                <svg width="24" viewBox="0 0 24 24"><use href="#icon-like"></use></svg>
+                                <span class="project__user__name">9</span>
+                            </a>
+                        </div>
+
+                        <a class="project__user project__button--pattern" href="">
+                            <div class="project__user__avatar"></div>
+                            <span class="project__user__name">@Doug</span>
+                        </a>
+                    </div>
+                </div>
+
+            </section>
 
             <!--MENU MOBILE-->
             <section class="nav-mobile">
                 <nav class="nav">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a class="nav__item__link" href="index.html">
+                            <a class="nav__item__link nav__item--inactive" href="index.html">
                                 <div class="nav__item__icon"><svg width="24" viewBox="0 0 24 24"><use href="#icon-code"></use></svg></div>
                                 <span>Editor de código</span>
                             </a>
                         </li>
 
                         <li class="nav__item">
-                            <a class="nav__item__link nav__item--inactive" href="community.html">
+                            <a class="nav__item__link" href="community.html">
                                 <div class="nav__item__icon"><svg width="24" viewBox="0 0 24 24"><use href="#icon-community"></use></svg></div>
                                 <span>Comunidade</span>
                             </a>
@@ -139,12 +254,10 @@
                     <span class="menu__user__name">Douglas D.</span>
                 </a>
             </section>
-
+            
         </main>
 
         <script src="nav-mobile.js"></script>
-        <script src="color.js"></script>
-        <script src="text-area-height.js"></script>
     </body>
 </html>
 
@@ -183,5 +296,13 @@
     <symbol id="icon-select">
         <path d="M24 24H0V0h24v24z" fill="none"/>
         <path d="M15.88 9.29L12 13.17 8.12 9.29c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"/>
+    </symbol>
+
+    <symbol id="icon-comment">
+        <path d="M12 3.25C6.47656 3.25 2 6.88672 2 11.375C2 13.3125 2.83594 15.0859 4.22656 16.4805C3.73828 18.4492 2.10547 20.2031 2.08594 20.2227C2 20.3125 1.97656 20.4453 2.02734 20.5625C2.07812 20.6797 2.1875 20.75 2.3125 20.75C4.90234 20.75 6.84375 19.5078 7.80469 18.7422C9.08203 19.2227 10.5 19.5 12 19.5C17.5234 19.5 22 15.8633 22 11.375C22 6.88672 17.5234 3.25 12 3.25Z"/>
+    </symbol>
+
+    <symbol id="icon-like">
+        <path d="M20.0587 4.44659C17.9181 2.6224 14.7346 2.95052 12.7698 4.97783L12.0003 5.77078L11.2308 4.97783C9.26987 2.95052 6.08243 2.6224 3.94185 4.44659C1.48877 6.5403 1.35987 10.298 3.55514 12.5675L11.1136 20.3721C11.6019 20.876 12.3948 20.876 12.8831 20.3721L20.4415 12.5675C22.6407 10.298 22.5118 6.5403 20.0587 4.44659Z"/>
     </symbol>
 </svg>
