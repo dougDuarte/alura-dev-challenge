@@ -29,20 +29,23 @@
     border-radius: var(--mainBorderRadius) var(--mainBorderRadius) 0px 0px;
 }
 
+pre {
+    display: block;
+    border-radius: 0px 0px var(--mainBorderRadius) var(--mainBorderRadius);
+    overflow: hidden;
+    white-space: pre-wrap;
+}
+
 .project__thumbnail {
-    background-color: var(--codePanelColor);
+    display: block;
     height: 100%;
     padding: 0px 16px 16px 16px;
-    color: var(--brightColor);
     font-family: 'Roboto Mono', monospace;
     font-size: 12px;
     font-weight: var(--mainFontWeight);
     line-height: 1.5;
     border: none;
     outline: none;
-    border-radius: 0px 0px var(--mainBorderRadius) var(--mainBorderRadius);
-    resize: none;
-    overflow: hidden;
 }
 
 .project:nth-child(1) .project__thumbnail-container {

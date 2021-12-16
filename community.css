@@ -7,7 +7,11 @@ body, input, button, textarea, select {
 body {
     position: relative;
     background-color: var(--mainColor);
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--mainSpacing);
     padding: var(--mainSpacing);
+    overflow-x: hidden;
 }
 
 h2 {

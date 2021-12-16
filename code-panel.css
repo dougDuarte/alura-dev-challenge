@@ -22,9 +22,7 @@
 }
 
 .main__code {
-    background-color: var(--codePanelColor);
     padding: 0px 16px 16px 16px;
-    color: var(--brightColor);
     font-family: 'Roboto Mono', monospace;
     font-size: 14px;
     font-weight: var(--mainFontWeight);
@@ -32,8 +30,7 @@
     border: none;
     outline: none;
     border-radius: 0px 0px var(--mainBorderRadius) var(--mainBorderRadius);
-    resize: none;
-    box-sizing: border-box;
+    white-space: pre-wrap;
 }
 
 /*QUERIES ------->>>*/

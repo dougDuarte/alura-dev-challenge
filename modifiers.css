@@ -64,6 +64,7 @@
 
 /*MODIFIER: BOTÃO DO MENU ------->>>*/
 .menu__button--pattern {
+    display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
@@ -106,6 +107,7 @@
     text-decoration: none;
     transition: var(--mainColorTransition) background-color;
     cursor: pointer;
+    user-select: none;
 }
 
 .project__button--pattern:hover {

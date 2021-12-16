@@ -1,4 +1,4 @@
-const codePanel = document.querySelector('.main__code')
+/*const codePanel = document.querySelector('.main__code')
 
 window.addEventListener('resize', resizeTextBox)
 codePanel.addEventListener('input', resizeTextBox)
@@ -9,10 +9,4 @@ resizeTextBox()
 function resizeTextBox() {
     codePanel.style.height = 'auto'
     codePanel.style.height = codePanel.scrollHeight + 'px'
-}
-
-
-
-
-
-
+}*/
