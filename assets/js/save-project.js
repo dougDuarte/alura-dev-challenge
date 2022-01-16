@@ -15,4 +15,5 @@ FORM.addEventListener('submit', (event) => {
     projects.push(PROJECT)
 
     sessionStorage.setItem('saved-projects', JSON.stringify(projects))
+    alert('Código salvo na comunidade!')
 })
