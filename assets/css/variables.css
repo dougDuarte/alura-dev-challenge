@@ -1,0 +1,19 @@
+:root {
+    --mainColor: #051D3B;
+    --secondaryColor: #5081FB;
+    --brightColor: #fdfdfd;
+    --codePanelColor: #282936;
+    --inputColor: #2D415A;
+    --inputHoverColor: #41536A;
+    --inputPlaceholderColor: #8897a7;
+    --projectColor: #041832;
+    --projectDescriptionColor: #CDD1D6;
+    --smallButtonHoverColor: #0B254A;
+    --smallButtonActiveColor: #112D5A;
+    --navMobileColor: #2D415B;
+    --mainSpacing: 32px;
+    --mainBorderRadius: 8px;
+    --mainFontSize: 16px;
+    --mainFontWeight: 300;
+    --mainColorTransition: 0.2s;
+}

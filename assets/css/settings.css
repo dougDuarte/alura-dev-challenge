@@ -1,0 +1,89 @@
+/*CONFIGURAÇÕES DO PROJETO ------->>>*/
+.settings {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    width: 25%;
+}
+
+.settings__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+
+.settings__info__title {
+    resize: none;
+}
+
+.settings__info__description {
+    resize: none;
+}
+
+.settings__style {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+
+.settings__style-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.settings__style__language {
+    height: 56px;
+    /*appearance: none;*/
+}
+
+.settings__style__color-container {
+    height: 56px;
+    padding: 8px;
+    border: 1px solid var(--brightColor);
+    border-radius: var(--mainBorderRadius);
+    box-sizing: border-box;
+}
+
+.settings__style__color {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+}
+
+.settings__style__color::-webkit-color-swatch-wrapper {
+    padding: 0px;
+    margin: 0px;
+}
+
+.settings__style__color::-webkit-color-swatch {
+	border: none;
+    border-radius: calc(var(--mainBorderRadius) / 2);
+}
+
+/*QUERIES ------->>>*/
+@media screen and (max-width: 1200px) {
+    .settings {
+        width: 100%;
+    }
+
+    .settings__style-container {
+        flex-direction: row;
+    }
+    
+    .settings__style__language, .settings__style__color-container {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .settings__style-container {
+        flex-direction: column;
+    }
+    
+    .settings__style__language, .settings__style__color-container {
+        width: initial;
+    }
+}

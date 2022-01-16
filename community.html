@@ -4,15 +4,15 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="global.css">
-        <link rel="stylesheet" href="dracula.css">
-        <link rel="stylesheet" href="community.css">
-        <link rel="stylesheet" href="menu.css">
-        <link rel="stylesheet" href="nav.css">
-        <link rel="stylesheet" href="project.css">
-        <link rel="stylesheet" href="nav-mobile.css">
-        <link rel="stylesheet" href="modifiers.css">
-        <link rel="stylesheet" href="variables.css">
+        <link rel="stylesheet" href="assets/css/global.css">
+        <link rel="stylesheet" href="assets/css/dracula.css">
+        <link rel="stylesheet" href="assets/css/community.css">
+        <link rel="stylesheet" href="assets/css/menu.css">
+        <link rel="stylesheet" href="assets/css/nav.css">
+        <link rel="stylesheet" href="assets/css/project.css">
+        <link rel="stylesheet" href="assets/css/nav-mobile.css">
+        <link rel="stylesheet" href="assets/css/modifiers.css">
+        <link rel="stylesheet" href="assets/css/variables.css">
         <title>Alura Dev - Comunidade</title>
     </head>
 
@@ -31,7 +31,7 @@
 
                 <div class="menu__query-button menu__button--pattern --desktop-hidden"><svg width="24" viewBox="0 0 24 24"><use class="icon-menu" href="#icon-menu"></use><use class="icon-menu-exit" href="#icon-menu-exit"></use></svg></div>
 
-                <a class="menu__user menu__button--pattern --tablet-hidden --mobile-hidden" href="">
+                <a class="menu__user menu__button--pattern --tablet-hidden --mobile-hidden">
                     <div class="menu__user__avatar"></div>
                     <span class="menu__user__name">Douglas D.</span>
                 </a>
@@ -62,171 +62,7 @@
             </nav>
 
             <!--ÁREA CENTRAL-->
-            <section class="projects-container">
-
-                <div class="project">
-                    <div class="project__thumbnail-container">
-                        <div class="project__thumbnail-icon"><svg width="32" viewBox="0 0 52 12"><use href="#icon-mac"></use></svg></div>
-
-                        <pre><code class="project__thumbnail hljs" spellcheck="false" contenteditable="false">const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
-
-const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
-
-const unfold = (f, seed) => {
-    const go = (f, seed, acc) => {
-    const res = f(seed)
-    return res ? go(f, res[1], acc.concat([res[0]])) : acc
-    }
-    return go(f, seed, [])
-}</code></pre>
-                    </div>
-
-                    <div class="project__info">
-                        <h3 class="project__info__title">Título do projeto</h3>
-                        <p class="project__info__description">Essa é a descrição do meu projeto.</p>
-                    </div>
-
-                    <div class="project__social">
-                        <div>
-                            <div class="project__social__icon project__button--pattern">
-                                <svg width="24" viewBox="0 0 24 24"><use href="#icon-comment"></use></svg>
-                                <span class="project__user__name">4</span>
-                            </div>
-
-                            <div class="project__social__icon icon-like project__button--pattern">
-                                <svg width="24" viewBox="0 0 24 24"><use href="#icon-like"></use></svg>
-                                <span class="project__user__name">15</span>
-                            </div>
-                        </div>
-
-                        <a class="project__user project__button--pattern" href="">
-                            <div class="project__user__avatar"></div>
-                            <span class="project__user__name">@Doug</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project">
-                    <div class="project__thumbnail-container">
-                        <div class="project__thumbnail-icon"><svg width="32" viewBox="0 0 52 12"><use href="#icon-mac"></use></svg></div>
-
-                        <pre><code class="project__thumbnail hljs" spellcheck="false" contenteditable="false">@import url('https://fonts.googleapis.com/css?family=Nova+Mono&display=swap');
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    min-height: 100vh;
-    background-color: #18181c;
-    display: flex;
-    align-items: center;</code></pre>
-                    </div>
-
-                    <div class="project__info">
-                        <h3 class="project__info__title">Título do projeto</h3>
-                        <p class="project__info__description">Essa é a descrição do meu projeto.</p>
-                    </div>
-
-                    <div class="project__social">
-                        <div>
-                            <div class="project__social__icon project__button--pattern">
-                                <svg width="24" viewBox="0 0 24 24"><use href="#icon-comment"></use></svg>
-                                <span class="project__user__name">3</span>
-                            </div>
-
-                            <div class="project__social__icon icon-like project__button--pattern">
-                                <svg width="24" viewBox="0 0 24 24"><use href="#icon-like"></use></svg>
-                                <span class="project__user__name">9</span>
-                            </div>
-                        </div>
-
-                        <a class="project__user project__button--pattern" href="">
-                            <div class="project__user__avatar"></div>
-                            <span class="project__user__name">@Doug</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project">
-                    <div class="project__thumbnail-container">
-                        <div class="project__thumbnail-icon"><svg width="32" viewBox="0 0 52 12"><use href="#icon-mac"></use></svg></div>
-
-                        <pre><code class="project__thumbnail hljs" spellcheck="false" contenteditable="false">let textureOldGoldURL = "https://assets.codepen.io/911157/matcapCop.jpg";
-let modelURL = "https://assets.codepen.io/911157/creativityDoodle_by_Anna_the_Scavenger.glb";
-
-// LANDSCAPE / PORTRAIT
-
-let isMobile = /(Android|iPhone|iOS|iPod|iPad)/i.test(navigator.userAgent);
-let windowRatio = window.innerWidth / window.innerHeight;
-let isLandscape = (windowRatio > 1) ? true : false;</code></pre>
-                    </div>
-
-                    <div class="project__info">
-                        <h3 class="project__info__title">Título do projeto</h3>
-                        <p class="project__info__description">Essa é a descrição do meu projeto.</p>
-                    </div>
-
-                    <div class="project__social">
-                        <div>
-                            <div class="project__social__icon project__button--pattern">
-                                <svg width="24" viewBox="0 0 24 24"><use href="#icon-comment"></use></svg>
-                                <span class="project__user__name">25</span>
-                            </div>
-
-                            <div class="project__social__icon icon-like project__button--pattern">
-                                <svg width="24" viewBox="0 0 24 24"><use href="#icon-like"></use></svg>
-                                <span class="project__user__name">77</span>
-                            </div>
-                        </div>
-
-                        <a class="project__user project__button--pattern" href="">
-                            <div class="project__user__avatar"></div>
-                            <span class="project__user__name">@Doug</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project">
-                    <div class="project__thumbnail-container">
-                        <div class="project__thumbnail-icon"><svg width="32" viewBox="0 0 52 12"><use href="#icon-mac"></use></svg></div>
-
-                        <pre><code class="project__thumbnail hljs" spellcheck="false" contenteditable="false">let textureOldGoldURL = "https://assets.codepen.io/911157/matcapCop.jpg";
-let modelURL = "https://assets.codepen.io/911157/creativityDoodle_by_Anna_the_Scavenger.glb";
-
-// LANDSCAPE / PORTRAIT
-
-let isMobile = /(Android|iPhone|iOS|iPod|iPad)/i.test(navigator.userAgent);
-let windowRatio = window.innerWidth / window.innerHeight;
-let isLandscape = (windowRatio > 1) ? true : false;</code></pre>
-                    </div>
-
-                    <div class="project__info">
-                        <h3 class="project__info__title">Título do projeto</h3>
-                        <p class="project__info__description">Essa é a descrição do meu projeto.</p>
-                    </div>
-
-                    <div class="project__social">
-                        <div>
-                            <div class="project__social__icon project__button--pattern">
-                                <svg width="24" viewBox="0 0 24 24"><use href="#icon-comment"></use></svg>
-                                <span class="project__user__name">2</span>
-                            </div>
-
-                            <div class="project__social__icon icon-like project__button--pattern">
-                                <svg width="24" viewBox="0 0 24 24"><use href="#icon-like"></use></svg>
-                                <span class="project__user__name">17</span>
-                            </div>
-                        </div>
-
-                        <a class="project__user project__button--pattern" href="">
-                            <div class="project__user__avatar"></div>
-                            <span class="project__user__name">@Doug</span>
-                        </a>
-                    </div>
-                </div>
-
-            </section>
+            <section class="projects-container"></section>
 
             <!--MENU MOBILE-->
             <section class="nav-mobile">
@@ -258,10 +94,11 @@ let isLandscape = (windowRatio > 1) ? true : false;</code></pre>
             
         </main>
 
-        <script src="nav-mobile.js"></script>
-        <script src="like-system.js"></script>
-        <script src="search-bar.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+        <script src="assets/js/nav-mobile.js"></script>
+        <script src="assets/js/search-bar.js"></script>
+        <script src="assets/js/create-item-community.js"></script>
+        <script src="assets/js/like-system.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
         <script>hljs.highlightAll()</script>
     </body>
 </html>

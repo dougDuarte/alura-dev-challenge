@@ -1,0 +1,39 @@
+.nav-mobile {
+    position: fixed;
+    right: 0px;
+    background-color: var(--navMobileColor);
+    display: flex;
+    flex-direction: column;
+    width: 256px;
+    height: 512px;
+    padding: 24px;
+    border: 1px solid var(--inputHoverColor);
+    border-radius: var(--mainBorderRadius) 0px 0px var(--mainBorderRadius);
+    box-sizing: border-box;
+    z-index: 10;
+    transform: translateX(256px);
+    visibility: hidden;
+    transition: 0.4s transform;
+}
+
+.nav-mobile hr {
+    border: 1px solid var(--inputHoverColor);
+    width: 100%;
+    margin: 24px 0px;
+}
+
+.nav-mobile .menu__user {
+    width: fit-content;
+}
+
+.nav-mobile .menu__user:hover {
+    background-color: #0B254A40;
+}
+
+.nav-mobile .menu__user:active {
+    background-color: #112D5A40;
+}
+
+.nav-mobile .nav {
+    width: 100%;
+}

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
+
+body, input, button, textarea, select {
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    position: relative;
+    background-color: var(--mainColor);
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--mainSpacing);
+    padding: var(--mainSpacing);
+    overflow-x: hidden;
+}
+
+h2, h3 {
+    color: var(--brightColor);
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: 12px;
+    font-weight: var(--mainFontWeight);
+}
+
+input[type=color], select {
+    cursor: pointer;
+}
+
+option {
+    background-color: var(--inputHoverColor);
+    font-weight: var(--mainFontWeight);
+}
+
+optgroup {
+    background-color: var(--inputColor);
+    font-weight: 500;
+}
+
+main {
+    display: flex;
+    justify-content:space-between;
+    gap: var(--mainSpacing);
+}
+
+/*QUERIES ------->>>*/
+@media screen and (max-width: 1200px) {
+    main {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    body {
+        padding: calc(var(--mainSpacing) / 2);
+    }
+}

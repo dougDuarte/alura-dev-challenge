@@ -1,0 +1,139 @@
+/*MODIFICADOR: INPUTS DO USUÁRIO ------->>>*/
+.input--pattern {
+    background-color: var(--inputColor);
+    padding: 16px;
+    color: var(--brightColor);
+    font-size: var(--mainFontSize);
+    font-weight: var(--mainFontWeight);
+    outline: none;
+    border: none;
+    border-radius: var(--mainBorderRadius);
+    transition: var(--mainColorTransition) background-color;
+}
+
+.input--pattern:hover, .input--pattern:focus {
+    background-color: var(--inputHoverColor);
+}
+
+.input--pattern::placeholder {
+    color: var(--inputPlaceholderColor);
+}
+
+/*MODIFICADOR: BOTÃO PRINCIPAL ------->>>*/
+.main-button--pattern {
+    background-color: var(--secondaryColor);
+    height: 56px;
+    border: none;
+    outline: none;
+    border-radius: var(--mainBorderRadius);
+    color: var(--mainColor);
+    font-size: var(--mainFontSize);
+    cursor: pointer;
+    transition: var(--mainColorTransition) background-color;
+}
+
+.main-button--pattern:hover {
+    background-color: #7BA4FC;
+}
+
+.main-button--pattern:active {
+    outline: 4px solid #5081FB;
+}
+
+/*MODIFICADOR: BOTÃO SECUNDÁRIO ------->>>*/
+.secondary-button--pattern {
+    background-color: #5081FB10;
+    height: 56px;
+    border: none;
+    outline: none;
+    border-radius: var(--mainBorderRadius);
+    color: var(--brightColor);
+    font-size: var(--mainFontSize);
+    font-weight: var(--mainFontWeight);
+    cursor: pointer;
+    transition: var(--mainColorTransition) background-color;
+}
+
+.secondary-button--pattern:hover {
+    background-color: #5081FB20;
+}
+
+.secondary-button--pattern:active {
+    outline: 4px solid #5081FB30;
+}
+
+/*MODIFIER: BOTÃO DO MENU ------->>>*/
+.menu__button--pattern {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    fill: var(--brightColor);
+    border-radius: 16px;
+    transition: var(--mainColorTransition) background-color;
+    cursor: pointer;
+}
+
+.menu__button--pattern:hover {
+    background-color: var(--smallButtonHoverColor);
+}
+
+.menu__button--pattern:active {
+    transition: none;
+    background-color: var(--smallButtonActiveColor);
+}
+
+/*MODIFICADOR: NAVEGAÇÃO ------->>>*/
+.nav__item--inactive {
+    opacity: 0.3;
+    transition: var(--mainColorTransition) opacity;
+}
+
+.nav__item--inactive:hover {
+    opacity: 0.5;
+}
+
+/*MODIFIER: BOTÃO DO PROJETO ------->>>*/
+.project__button--pattern {
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    color: var(--brightColor);
+    font-size: var(--mainFontSize);
+    font-weight: var(--mainFontWeight);
+    fill: var(--brightColor);
+    text-decoration: none;
+    transition: var(--mainColorTransition) background-color;
+    cursor: pointer;
+    user-select: none;
+}
+
+.project__button--pattern:hover {
+    background-color: var(--smallButtonHoverColor);
+}
+
+.project__button--pattern:active {
+    transition: none;
+    background-color: var(--smallButtonActiveColor);
+}
+
+/*QUERIES ------->>>*/
+@media screen and (min-width: 1201px) {
+    .--desktop-hidden {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1200px) {
+    .--tablet-hidden {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .--mobile-hidden {
+        display: none;
+    }
+}

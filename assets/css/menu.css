@@ -1,0 +1,97 @@
+/*MENU ------->>>*/
+.menu {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: var(--mainSpacing);
+    height: 56px;
+}
+
+.menu__logo-container {
+    display: flex;
+    width: 25%;
+}
+
+.menu__logo {
+    display: flex;
+    fill: var(--brightColor);
+}
+
+.menu__search {
+    width: 50%;
+    height: 100%;
+}
+
+.menu__user-container {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 8px;
+    width: 25%;
+}
+
+.menu__query-button, .menu__query-search {
+    width: 48px;
+    height: 48px;
+}
+
+.menu__query-button svg {
+    transition: 0.4s transform;
+}
+
+.menu__query-button:hover svg{
+    transform: rotateZ(180deg);
+}
+
+.menu__query-search svg {
+    transition: 0.4s transform;
+}
+
+.menu__query-search:hover svg{
+    transform: rotateY(180deg);
+}
+
+.icon-menu-exit {
+    display: none;
+}
+
+.icon-search-exit {
+    display: none;
+}
+
+.menu__user {
+    column-gap: 8px;
+    padding: 12px;
+}
+
+.menu__user__avatar {
+    background-image: url("/assets/img/avatar.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.menu__user__name {
+    color: var(--brightColor);
+    font-size: var(--mainFontSize);
+    font-weight: var(--mainFontWeight);
+}
+
+/*QUERIES ------->>>*/
+@media screen and (max-width: 1200px) {
+    .menu__logo-container, .menu__user-container {
+        width: initial;
+    }
+
+    .menu__search {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .menu__search {
+        display: none;
+    }
+}
