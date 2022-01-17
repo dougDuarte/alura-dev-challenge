@@ -1,22 +1,21 @@
 # Alura Challenge Front-End 2021
 
-Participando do Alura Challenge do final de 2021, com foco em front-end! O projeto ainda não está finalizado.
+Minha participação no Alura Challenge que começou no final de 2021, com foco em front-end!
 
 ## 🚀 Objetivo
 
-O objetivo final é criar um site em que pessoas possam escrever códigos curtos - ou snippets - e compartilhar com outros usuários da plataforma. Além da página inicial para a escrita do código, terá ainda uma segunda com os códigos que foram feitos pela comunidade, disponíveis para todos verem.
+O objetivo era criar um site em que pessoas pudessem escrever códigos curtos - ou snippets - e compartilhar com outros usuários da plataforma. Além da página inicial para a escrita do código, tem ainda uma segunda com os códigos salvos.
 
 ## ✏️ Design
 
-Estou utilizando CSS vanilla para a estilização do projeto. Inclusive, o layout é 100% responsivo.
+Foi utilizado CSS vanilla para a estilização do projeto. Inclusive, o layout é 100% responsivo.
 
 ## 💻 Funcionalidades
 
-A versão final deve ter as seguintes características:
 * Escrita do código na página principal;
 * Opção de troca de cor do fundo do código;
 * Botão para ligar o "highlight" no código, deixando o visual parecido com um editor de texto tradicional;
-* Botão salvar que envia o código criado para a página da comunidade, utilizando local storage;
+* Botão salvar que envia o código criado para a página da comunidade, utilizando local/session storage;
 * Sistema de likes na comunidade.
 
 ## 😀 Quer falar comigo?
