@@ -1,3 +1,8 @@
+<div float="left">
+  <img src="https://i.ibb.co/bJRsqMc/alura2.png" width="192" /> 
+  <img src="https://i.ibb.co/vZnFr3J/alura1.png" width="192" />
+</div>
+
 # Alura Challenge Front-End 2021
 
 Minha participação no Alura Challenge que começou no final de 2021, com foco em front-end!
@@ -13,6 +18,7 @@ Foi utilizado CSS vanilla para a estilização do projeto. Inclusive, o layout �
 ## 💻 Funcionalidades
 
 * Escrita do código na página principal;
+* Versão mobile com menu e pesquisa responsivos;
 * Opção de troca de cor do fundo do código;
 * Botão para ligar o "highlight" no código, deixando o visual parecido com um editor de texto tradicional;
 * Botão salvar que envia o código criado para a página da comunidade, utilizando local/session storage;
