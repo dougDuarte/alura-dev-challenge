@@ -1,6 +1,6 @@
 <div float="left">
-  <img src="https://i.ibb.co/bJRsqMc/alura2.png" width="192" /> 
-  <img src="https://i.ibb.co/vZnFr3J/alura1.png" width="192" />
+  <img src="https://i.ibb.co/bJRsqMc/alura2.png" width="176" /> 
+  <img src="https://i.ibb.co/vZnFr3J/alura1.png" width="176" />
 </div>
 
 # Alura Challenge Front-End 2021
